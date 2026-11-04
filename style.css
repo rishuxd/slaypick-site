@@ -1,20 +1,24 @@
-:root { --ink: #2A1745; --pink: #FF4F8B; --purple: #7B4DFF; --yellow: #FFC83D; --bg: #FFF6FB; --card: #FFFFFF; --muted: #5E4C75; --line: #F1E4F7; }
-@media (prefers-color-scheme: dark) { :root { --ink: #F4ECFF; --bg: #170D27; --card: #221538; --muted: #C9B8E8; --line: #33224F; } }
+:root { --ink: #0F0F14; --accent: #5B3DF5; --accent-2: #8B74FF; --bg: #FFFFFF; --soft: #F5F5F8; --card: #FFFFFF; --muted: #5C5C6B; --line: #E7E7EE; }
+@media (prefers-color-scheme: dark) { :root { --ink: #F2F2F7; --bg: #0F0F14; --soft: #17171F; --card: #17171F; --muted: #A3A3B2; --line: #26262F; --accent: #8B74FF; } }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-header { background: radial-gradient(120% 140% at 80% 0%, #FF7FB0, #7B4DFF); color: #fff; padding: 40px 16px 56px; text-align: center; }
-header img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 10px 30px rgba(42,23,69,.35); }
-h1, h2, .brand { font-family: "Lilita One", system-ui, sans-serif; font-weight: 400; letter-spacing: .5px; }
-header h1 { font-size: 44px; margin: 12px 0 4px; text-shadow: 0 4px 0 rgba(42,23,69,.45); }
-header p { margin: 0; opacity: .95; }
-main { max-width: 760px; margin: -32px auto 40px; padding: 0 16px; }
-.card { background: var(--card); border-radius: 22px; padding: 26px 24px; box-shadow: 0 10px 30px rgba(42,23,69,.10); border: 1px solid var(--line); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.65 "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+header { padding: 56px 16px 40px; text-align: center; border-bottom: 1px solid var(--line); background: var(--soft); }
+header img { width: 84px; height: 84px; border-radius: 20px; }
+header img.brand { width: min(360px, 80%); height: auto; border-radius: 0; }
+.logo-dark { display: none; }
+@media (prefers-color-scheme: dark) { .logo-light { display: none; } .logo-dark { display: inline; } }
+h1, h2 { font-family: "Manrope", sans-serif; font-weight: 800; letter-spacing: -0.02em; }
+header h1 { font-size: 36px; margin: 14px 0 4px; }
+header p { margin: 10px 0 0; color: var(--muted); font-weight: 600; }
+main { max-width: 760px; margin: 36px auto 48px; padding: 0 16px; }
+.card { background: var(--card); border-radius: 18px; padding: 26px 24px; border: 1px solid var(--line); }
 .card + .card { margin-top: 18px; }
-h2 { font-size: 26px; color: var(--purple); margin: 26px 0 6px; }
+h2 { font-size: 24px; margin: 26px 0 6px; }
 h2:first-child { margin-top: 0; }
-a { color: var(--pink); }
+a { color: var(--accent); }
 .muted { color: var(--muted); font-size: 15px; }
-.btn { display: inline-block; background: var(--pink); color: #fff; text-decoration: none; padding: 12px 22px; border-radius: 16px; font-family: "Lilita One", sans-serif; font-size: 20px; border-bottom: 4px solid #C2215C; }
-.feature { width: 100%; border-radius: 18px; display: block; }
+.btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; padding: 11px 20px; border-radius: 12px; font-weight: 700; font-size: 16px; }
+.btn:hover { filter: brightness(1.08); }
+.feature { width: 100%; border-radius: 14px; display: block; }
 ul { padding-left: 22px; }
 footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16px 40px; }
